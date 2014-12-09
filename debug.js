@@ -63,9 +63,8 @@ function _debug (namespace) {
     _.forOwn(logger.levels,function(num,m) {
         // enabled ?
         debug[m] = function() {
-            if(debug.enabled){
-                logger[m].apply(logger,arguments)
-            }
+            // 不判断是否启用,logio接收所有debug消息
+            logger[m].apply(logger,arguments);
         };
     })
 
