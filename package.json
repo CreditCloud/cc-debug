@@ -1,6 +1,6 @@
 {
   "name": "cc-debug",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "replace tj's debug,log to log.io",
   "main": "index.js",
   "scripts": {
