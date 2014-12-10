@@ -3,12 +3,6 @@ var winston = require('winston')
 var config = require('config');
 var _ = require('lodash');
 require("winston-logio")
-var debugFactory= require('debug'); // tj's debug
-
-// debug config , copy from log4js-or-debug
-process.env.DEBUG = "*"
-process.env.DEBUG_COLORS = 'no'; // make sure debug formatter not add color characters for tty
-debugFactory.formatArgs = false
 
 module.exports = _debug
 
@@ -53,18 +47,17 @@ function getLogger (namespace) {
 }
 
 function _debug (namespace) {
-    var debug = debugFactory(namespace)
+    //debugFactory(namespace)
 
     var logger = getLogger(namespace)
 
-    // debug(abc) level 为 debug
-    debug.log = logger.debug.bind(logger) // debug() -> debug level
+    // 必须配置debug level
+    var debug = logger.debug;
     
     // 添加 debug.debug 等配置在levels里的方法
     _.forOwn(logger.levels,function(num,m) {
-        // enabled ?
         debug[m] = function() {
-            // 不判断是否启用,logio接收所有debug消息
+            // debug.debug()
             logger[m].apply(logger,arguments);
         };
     })
