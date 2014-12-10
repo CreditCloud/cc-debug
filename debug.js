@@ -32,7 +32,7 @@ function getLogger (namespace) {
         levels: config.levels,
         level: config.file_level, 
 
-        filename: pathFn.resolve('logs',namespace+'.log') // 在项目主文件夹运行
+        filename: pathFn.join(config.logs_dir,namespace+'.log') // 在项目主文件夹运行
     })
 
     // log.io
