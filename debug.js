@@ -6,6 +6,7 @@ require("winston-logio")
 var debugFactory= require('debug'); // tj's debug
 
 // debug config , copy from log4js-or-debug
+process.env.DEBUG = "*"
 process.env.DEBUG_COLORS = 'no'; // make sure debug formatter not add color characters for tty
 debugFactory.formatArgs = false
 
@@ -67,7 +68,7 @@ function _debug (namespace) {
             logger[m].apply(logger,arguments);
         };
     })
-
+    
     return debug
 }
 
