@@ -31,5 +31,5 @@ module.exports = {
     logio_level: "debug",
 
     // 存放xxx.log 的文件夹
-    logs_dir: pathFn.join(__dirname,"../logs")
+    logs_dir: pathFn.join(__dirname,"..","logs")
 }
