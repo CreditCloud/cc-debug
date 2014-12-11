@@ -1,7 +1,7 @@
 var pathFn = require('path')
 var winston = require('winston')
 var config = require('config');
-require("winston-logio")
+var Logio = require("winston-logio").Logio
 
 module.exports = _debug
 
@@ -31,7 +31,7 @@ function getLogger(namespace) {
     })
 
     // log.io
-    logger.add(winston.transports.Logio, {
+    logger.add(Logio, {
         levels: config.levels,
         level: config.logio_level,
 
@@ -62,18 +62,14 @@ function _debug(namespace) {
             };
         }
     }
-
     return debug
 }
 
 var Module = module.constructor
 var nativeLoad = Module._load
 Module._load = function(request, parent, isMain) {
-    var exports = nativeLoad.apply(this, arguments);
-
     if (request === 'debug') {
-        // exports
         return _debug
     }
-    return exports;
+    return nativeLoad.apply(this, arguments);
 };

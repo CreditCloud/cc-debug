@@ -1,6 +1,6 @@
 {
   "name": "cc-debug",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "replace tj's debug,log to log.io",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "winston-logio": "^0.2.0"
   },
   "peerDependencies": {
-    "config": "1.8.x",
-    "winston": "0.8.x"
+    "config": "^1.9.0",
+    "winston": "^0.8.3"
   }
 }

@@ -1,4 +1,4 @@
-require('../') // require('cc-debug')
+require('cc-debug')
 
 var debug = require('debug')("cc:test")
 
