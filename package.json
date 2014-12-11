@@ -1,6 +1,6 @@
 {
   "name": "cc-debug",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "replace tj's debug,log to log.io",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "cc",
     "debug"
   ],
-  "author": "CreditCloud",
+  "author": {
+    "name": "CreditCloud"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CreditCloud/cc-debug/issues"
@@ -24,8 +26,33 @@
     "mkdirp": "^0.5.0",
     "winston-logio": "^0.2.0"
   },
+  "devDependencies":{
+    "config": "^1.9.0",
+    "winston": "^0.8.3"
+  },
   "peerDependencies": {
     "config": "^1.9.0",
     "winston": "^0.8.3"
-  }
+  },
+  "gitHead": "877da31afbbfddd03069cd1990417d08897e7066",
+  "_id": "cc-debug@0.0.8",
+  "_shasum": "9038bd4bfa5c49f47387603b5e18998e55338e20",
+  "_from": "cc-debug@0.0.8",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "magicdawn",
+    "email": "784876393@qq.com"
+  },
+  "maintainers": [
+    {
+      "name": "magicdawn",
+      "email": "784876393@qq.com"
+    }
+  ],
+  "dist": {
+    "shasum": "9038bd4bfa5c49f47387603b5e18998e55338e20",
+    "tarball": "http://registry.npmjs.org/cc-debug/-/cc-debug-0.0.8.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/cc-debug/-/cc-debug-0.0.8.tgz"
 }
