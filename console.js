@@ -17,7 +17,7 @@ winston.add(winston.transports.File, {
     levels: config.levels,
     level: config.file_level,
 
-    filename: pathFn.resolve("logs", config.console_file_name) // project root 下面的logs文件夹,需要process.cwd = project root
+    filename: pathFn.join(config.logs_dir, config.console_file_name) // project root 下面的logs文件夹,需要process.cwd = project root
 })
 // logio
 winston.add(winston.transports.Logio, {

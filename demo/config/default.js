@@ -1,3 +1,5 @@
+var pathFn = require('path');
+
 module.exports = {
     // logio config
     logio: {
@@ -26,5 +28,8 @@ module.exports = {
     // 记录到文件的最低level
     file_level: "warn",
     // 输出到文件的最低level
-    logio_level: "debug"
+    logio_level: "debug",
+
+    // 存放xxx.log 的文件夹
+    logs_dir: pathFn.join(__dirname,"..","logs")
 }
